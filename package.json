@@ -1,0 +1,20 @@
+{
+  "name": "git_practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "git add . & git commit -m 'update' & git push -u origin main",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sowon0403/github-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sowon0403/github-practice/issues"
+  },
+  "homepage": "https://github.com/sowon0403/github-practice#readme"
+}
