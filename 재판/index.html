@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>재판</title>
+    <style>
+      * {
+        -ms-user-select: none;
+        -moz-user-select: -moz-none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
+        font-family: Arial;
+        margin: 0;
+        padding: 0;
+      }
+
+      .a {
+        display: block;
+        background-color: #f5f0f0;
+        border: none;
+        font-size: 18px;
+        padding: 3px;
+      }
+
+      .control {
+        width: 100%;
+        height: 10vh;
+        display: grid;
+        grid-template-columns: auto auto;
+        position: fixed;
+        bottom: 0%;
+      }
+
+      .control button {
+        font-size: 1em;
+      }
+
+      .sec {
+        width: 100%;
+        height: 10vh;
+        margin-bottom: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sec"></div>
+    <div class="control">
+      <button id="up">UP</button>
+      <button id="down">DOWN</button>
+    </div>
+    <script>
+      let step = 0;
+      let content =
+        `[검  사] : 예. (일어난다.) 이번 사건의 기소를 맡은 검사 소원입니다. 피고인 김예진은 2021년 학기 초부터 피해자 김주경을 야간자율학습 시간에 수시로 교무실로 불러서 격려를 해준다며 어깨를 주무르고, 허벅지가 탄탄하다며 수시로 쓰다듬었습니다. 그리고 수업 시간에 다른 학생들 앞에서 목이나 허리 등과 같은 신체 부위를 “남자가 이 정도는 돼야지.”라고 언급하며 해당 부위를 만졌습니다.  위 사실들로 인해 김주경은 정신적 충격과 성적 수치심을 받았습니다. 따라서 본 검사는 피고인의 행위가 학교 내 성추행(법)에 해당하여 기소하는 바입니다.
+#
+[검  사] : 예. 피고인의 반 학생이자 피해자 김주경의 옆자리 학생인 정원을 증인으로 신청하겠습니다.
+#
+[검  사] : (자리에서 일어나) 증인은 피해자 김주경과 같은 반 친구입니까?
+[검  사] : 야간 자율학습 시간 당시 피고인이 피해자를 일반 학생들과 다르게 수시로 교무실로 부르는 것을 보았습니까? 
+[검  사] : 수업시간에 피고인이 피해자 김주경의 신체부위를 만지며 “남자가 이 정도는 돼야지.”라고 말한 것을 들은 적이 있습니까?
+[검  사] : 이상입니다.
+#
+[검  사] : 저희 검사측은 김주경 피해자의 최근 정신과 진료 진단서를 제출합니다. 
+[검  사] : 재판장님, 어제 진료진단서를 받았을 때 더이상 통원치료를 받지 않아도 될 만큼 상태가 많이 호전되었고, 현재 비장애인과 전혀 차이 없을 만큼 나아졌음을 증명하기 증거를 신청하였습니다.
+[검  사] : 증인은 피고인이 수업 시간에 원고에게 그 발언을 했을 때 직접적으로 듣지 못한 것입니까?
+[검  사] : 그럼 그 반 분위기가 이 학생에게 심했을 수 있다는 것은 증인은 확인 할 수 없는 것이죠?
+[검  사] : 교무실에서 김주경 학생에게 상담을 하며 불필요한 신체 접촉이 이루어진 사실을 목격한 것은 사실입니까?
+[검  사] : 평소에 교무실에 학생을 상담이나 다른 차원으로 불렀을 때 신체 접촉을 통해 위로나 격려를 해 주는 것이 흔합니까?
+[검  사] : 그러면 다른 교사가 피해자 김주경 학생에게 신체 접촉 한 것을 본 적이 있습니까? 
+[검  사] : 네, 이상입니다.
+#
+[검  사] : 네, 피해자 김주경을 증인으로 신청합니다.
+#
+[검  사] : 11월 3일 사회시간 당시 수업 교실에 있었나요?
+[검  사] : 어쩌다 수업 시간에 그러한 이야기가 나오게 되었나요? 
+[검  사] : 그 이야기 중 선생님에게 지목 당했을 때 심경이 어떠했나요?
+[검  사] : 그런 생각이 들거나 수치심을 느낀 정확한 이유를 말해주실 수 있습니까?
+[검  사] : 이상입니다.
+#
+[검  사] : 재판장님, 이의 있습니다. 지금 변호인은 피해자의 약점을 드러내어 심리적 압박감을 조성하고 있습니다.
+[검  사] : 재판장님, 변호인은 또다시 약점을 들추어 피해자를 조롱하고 있습니다.
+#
+[검  사] :  피고인이 친근함의 명분이라도 학생에게 불필요한 저런 성적인 수치심이 들 수 있는 발언을 하는 것이 옳다고 생각하십니까?
+[검  사] : 그러나 피해자 김주경 학생이 성적인 수치심을 느꼈다고 증언했습니다. 성별이 바뀌었다고 생각을 해 보십시오. 그렇게 가볍게 생각할 부분입니까?
+[검  사] : 그런 식으로 성적 수치심을 느낄 만한 행동을 주의하지 않아도 된다면 맘대로 다른 학생의 허벅지와 목을 만지는 등의 행위를 하는 것이 합당하다고 하시는 겁니까?
+[검  사] : 이상입니다.
+#
+[검  사] : (일어서서) 이 일은 피해자 김주경 학생이 피고인에게 성추행 및 성희롱을 당한 것이 확실합니다. 김주경은 정신적 피해와 충격을 받았고, 변호인과 피고인의 주장은 다 억지로 끼워 맞춘 변명에 불과합니다. 아무리 직접적 증거가 없다 해도, 성추행을 판단할 때 피해자의 진술이 가장 중요합니다. 언어를 통한 성희롱의 경우도 증거가 없는 것이 대부분입니다. 증인도 존재하고 피해자도 피해를 입었으며 피고인은 자신이 한 행위를 인정하기까지 했는데 증거가 없으니 무조건 무죄를 선고하는 게 합당합니까? 피고인 측은 오히려 친근함, 위로와 격려의 차원이라는 더 추상적이고 주관적인 동기를 근거로 들며 행동을 합리화하는 변명을 하였고, 피해자에게 피해망상이 완치 되지 않았다는 조롱까지 했습니다. 이 피고인을 처벌하지 않을 경우 이것이 선례가 되어 자신이 당한 추행과 겪은 수치심을 말하지 못하여 이러한 일들이 더 발생하게 될 우려가 있습니다. 이들이 처벌을 받고 반성하여 다시는 이러한 성추행 및 성희롱을 저지르지 않도록 판사님의 현명한 판단을 부탁드리겠습니다.`.split(
+          "\n"
+        );
+
+      function color() {
+        if (step > 26) step -= 1;
+        if (step < 0) step += 1;
+        document.querySelectorAll(".a").forEach((el, i) => {
+          el.style.backgroundColor = "#f5f0f0";
+          if (i === step) {
+            el.style.backgroundColor = "#accfe4";
+            el.scrollIntoView({
+              block: "center",
+              behavior: "smooth",
+            });
+          }
+        });
+      }
+
+      document.querySelector("body").innerHTML =
+        content
+          .map((content) =>
+            content === "#" ? "<br />" : `<a class="a">${content}</a>`
+          )
+          .join("") + document.querySelector("body").innerHTML;
+
+      document.querySelectorAll(".a").forEach((el, i) => {
+        el.addEventListener("click", () => {
+          step = i;
+          color();
+        });
+      });
+
+      document.querySelector("body").addEventListener("keydown", (e) => {
+        if (e.key === "ArrowDown") step += 1;
+        if (e.key === "ArrowUp") step -= 1;
+        color();
+      });
+
+      document.querySelector("#up").addEventListener("click", () => {
+        step -= 1;
+        color();
+      });
+
+      document.querySelector("#down").addEventListener("click", () => {
+        step += 1;
+        color();
+      });
+
+      color();
+
+      window.addEventListener("unload", function (e) {
+        document.body.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
